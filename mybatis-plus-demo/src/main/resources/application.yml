@@ -1,0 +1,28 @@
+# 数据库和连接池配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/longer_demo?characterEncoding=utf-8
+    username: root
+    password: 789524
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  # 环境设置：dev 开发环境 test 测试环境 prod 生成环境
+  profiles:
+    active: dev
+
+# 日志信息
+# logging:
+  # level:
+    # com.qs.mybatisplus.mapper: debug
+
+# 使用 mybatis-plus 自带的日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  # 可以修改逻辑删除的值，默认是 0 和 1
+  # global-config:
+    # db-config:
+      # logic-delete-value: 1
+      # logic-not-delete-value: 0

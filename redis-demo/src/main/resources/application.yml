@@ -1,0 +1,5 @@
+spring:
+  redis:
+    # redis 缓冲数据库地址
+    host: localhost
+    port: 6379
